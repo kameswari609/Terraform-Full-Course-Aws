@@ -74,7 +74,8 @@ jobs:
 
       - name: Terraform Format
         id: fmt
-        run: terraform fmt -check
+        run: terraform fmt -recursive
+
 
       - name: Terraform Validate
         id: validate
@@ -202,3 +203,12 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply -auto-approve -input=false tfplan
+# test
+git
+add
+.git
+commit
+-m
+Test workflow trigger
+git
+push
